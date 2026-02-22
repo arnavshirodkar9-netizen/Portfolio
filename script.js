@@ -1,5 +1,4 @@
-
-// CUSTOM CURSOR
+// ================= CUSTOM CURSOR =================
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -8,7 +7,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 
-// CAROUSEL
+// ================= CAROUSEL =================
 document.querySelectorAll(".carousel").forEach(carousel => {
 
   const track = carousel.querySelector(".carousel-track");
@@ -36,6 +35,24 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 });
 
 
+// ================= LIGHTBOX =================
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".close");
 
+document.querySelectorAll(".carousel img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
 
+closeBtn.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
 
+lightbox.addEventListener("click", (e) => {
+  if (e.target !== lightboxImg) {
+    lightbox.style.display = "none";
+  }
+});
