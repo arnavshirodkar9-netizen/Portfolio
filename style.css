@@ -241,3 +241,18 @@ footer {
   transform: scale(1.03);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel img {
+  min-width: 100%;
+}
