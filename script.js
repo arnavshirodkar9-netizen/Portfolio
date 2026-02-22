@@ -1,4 +1,3 @@
-// Custom cursor
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -15,11 +14,8 @@ document.querySelectorAll("a, button, .card").forEach(el => {
   });
 });
 
-// Reusable carousel setup (ID-based)
 function setupCarousel(trackId) {
   const track = document.getElementById(trackId);
-  if (!track) return;
-
   const images = track.querySelectorAll("img");
   const prevBtn = track.parentElement.querySelector(".prev");
   const nextBtn = track.parentElement.querySelector(".next");
