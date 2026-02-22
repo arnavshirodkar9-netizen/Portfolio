@@ -227,3 +227,17 @@ footer {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Carousel Images */
+.carousel img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
