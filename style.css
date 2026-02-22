@@ -24,7 +24,7 @@ body {
   pointer-events: none;
   z-index: -1;
   overflow: hidden;
-  background: 
+  background:
     radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.18), transparent 40%),
     radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.12), transparent 40%);
   animation: bgMove 14s ease-in-out infinite alternate;
@@ -88,12 +88,24 @@ body {
   margin-bottom: 40px;
 }
 
+.category-title {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #8b5cf6;
+}
+
 .projects {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
+.project {
+  margin-top: 20px;
+}
+
+/* Cards for videos/images */
 .card {
   flex: 1;
   min-width: 250px;
@@ -112,7 +124,8 @@ body {
   box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
 }
 
-.card h3 {
+.card h3,
+.card h4 {
   margin-bottom: 10px;
 }
 
@@ -120,9 +133,22 @@ body {
   color: #bbb;
 }
 
+/* Shared media styles (video + img + iframe) */
+.project-media {
+  width: 100%;
+  max-height: 450px;
+  border-radius: 20px;
+  margin: 15px 0;
+  object-fit: cover;
+}
+
 /* ABOUT */
 .about {
   padding: 100px 10%;
+}
+
+.about h2 {
+  font-size: 2rem;
 }
 
 .about p {
@@ -130,6 +156,52 @@ body {
   max-width: 600px;
   color: #bbb;
 }
+
+/* CAROUSELS */
+.carousel-section,
+.illustrations {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.carousel-section h2,
+.illustrations h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 999px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* FOOTER */
 footer {
@@ -170,59 +242,20 @@ footer {
   50% { opacity: 0.9; }
 }
 
-.category-title {
-  margin-top: 80px;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  color: #8b5cf6;
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 6%;
+  }
 
-.project-media {
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  object-fit: cover;
-}
+  .work,
+  .about,
+  .carousel-section,
+  .illustrations {
+    padding: 60px 6%;
+  }
 
-.project-media {
-  width: 100%;
-  height: 450px;
-  border-radius: 20px;
-  margin-top: 15px;
+  .project-media {
+    max-height: 320px;
+  }
 }
-.carousel-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.carousel {
-  position: relative;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-track img {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 10px;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
