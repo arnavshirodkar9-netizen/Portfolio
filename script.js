@@ -5,7 +5,17 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
+// Hover effect for clickable elements
+const hoverElements = document.querySelectorAll("a, button, img, iframe");
 
+hoverElements.forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("active");
+  });
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("active");
+  });
+});
 
 // ================= CAROUSEL =================
 document.querySelectorAll(".carousel").forEach(carousel => {
@@ -56,3 +66,4 @@ lightbox.addEventListener("click", (e) => {
     lightbox.style.display = "none";
   }
 });
+
