@@ -39,3 +39,4 @@ function setupCarousel(trackId) {
 
 setupCarousel("posterTrack");
 setupCarousel("illustrationTrack");
+
