@@ -166,7 +166,9 @@ footer {
 }
 
 
-/* ================= CUSTOM CURSOR ================= */
+
+
+/* ================= PREMIUM CURSOR ================= */
 
 .cursor {
   position: fixed;
@@ -177,6 +179,14 @@ footer {
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+}
+
+/* Hover Grow Effect */
+.cursor.active {
+  transform: translate(-50%, -50%) scale(1.8);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.9);
 }
 
 
@@ -276,4 +286,5 @@ footer {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 0.9; }
 }
+
 
