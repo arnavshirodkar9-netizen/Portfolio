@@ -2,20 +2,24 @@
 const cursor = document.querySelector(".cursor");
 
 document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+  if (cursor) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  }
 });
+
 // Hover effect for clickable elements
 const hoverElements = document.querySelectorAll("a, button, img, iframe");
 
 hoverElements.forEach(el => {
   el.addEventListener("mouseenter", () => {
-    cursor.classList.add("active");
+    if (cursor) cursor.classList.add("active");
   });
   el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("active");
+    if (cursor) cursor.classList.remove("active");
   });
 });
+
 
 // ================= CAROUSEL =================
 document.querySelectorAll(".carousel").forEach(carousel => {
@@ -23,47 +27,58 @@ document.querySelectorAll(".carousel").forEach(carousel => {
   const track = carousel.querySelector(".carousel-track");
   const prevBtn = carousel.querySelector(".prev");
   const nextBtn = carousel.querySelector(".next");
+  const images = track.querySelectorAll("img");
 
   let index = 0;
-  const images = track.querySelectorAll("img");
-  const totalImages = images.length;
 
   function updateCarousel() {
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const imageWidth = images[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${index * imageWidth}px)`;
   }
 
   nextBtn.addEventListener("click", () => {
-    index = (index + 1) % totalImages;
-    updateCarousel();
+    if (index < images.length - 1) {
+      index++;
+      updateCarousel();
+    }
   });
 
   prevBtn.addEventListener("click", () => {
-    index = (index - 1 + totalImages) % totalImages;
-    updateCarousel();
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
   });
+
+  window.addEventListener("resize", updateCarousel);
 
 });
 
 
 // ================= LIGHTBOX =================
-const lightbox = document.getElementById("lightbox");
+const lightbox = document.querySelector(".lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".close");
 
 document.querySelectorAll(".carousel img").forEach(img => {
   img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
+    if (lightbox && lightboxImg) {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    }
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target !== lightboxImg) {
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
-  }
-});
+  });
+}
 
+if (lightbox) {
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+}
