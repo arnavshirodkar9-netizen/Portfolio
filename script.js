@@ -1,3 +1,23 @@
+
+});
+
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+document.querySelectorAll("a, button, .card").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(2)";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+  });
+  
+});
+
 document.querySelectorAll(".carousel").forEach(carousel => {
 
   const track = carousel.querySelector(".carousel-track");
@@ -21,24 +41,5 @@ document.querySelectorAll(".carousel").forEach(carousel => {
     index = (index - 1 + totalImages) % totalImages;
     updateCarousel();
   });
-
-});
-
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
-document.querySelectorAll("a, button, .card").forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(2)";
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(1)";
-  });
-});
-
 
 
