@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arnav Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<div class="background"></div>
-<div class="cursor"></div>
-
-<!-- ================= NAVBAR ================= -->
-
-<header class="navbar">
+  <div class="background"></div>
+  <header class="navbar">
   <div class="logo">Arnav</div>
+
   <nav class="nav-links">
     <a href="#about">About Me</a>
     <a href="#work">Projects</a>
@@ -23,134 +19,177 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1>
+      I Create <span class="glow-text">Motion</span><br>
+      That Converts.
+    </h1>
+    <p class="subtitle">
+      Video Editor & Digital Marketer building content with impact.
+    </p>
+  </section>
 
-<section class="hero">
-  <h1>I Create <span class="glow-text">Motion</span></h1>
-  <p class="subtitle">Video Editor & Digital Marketer</p>
-</section>
+  <!-- ================= WORK SECTION ================= -->
 
-<!-- ================= ABOUT ================= -->
+  <section id="work" class="work">
+    <h2 class="section-title">Selected Work</h2>
 
-<section id="about" class="about">
-  <div class="about-container">
+    <!-- SHORT FILM -->
+    <h3 class="category-title">Short Film</h3>
+    <div class="projects">
+      <div class="card">
+        <iframe 
+          class="project-media"
+          src="https://www.youtube.com/embed/sx3dkeiiK7g"
+          title="Short Film"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <h4>Short Film</h4>
+        <p>Cinematic storytelling with structured pacing and emotional build.</p>
+      </div>
+    </div>
 
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I’m Arnav, a video editor and digital marketer blending cinematic
-        storytelling with performance strategy. I don’t just create visuals —
-        I craft content that drives measurable results.
-      </p>
+    <!-- MOTION GRAPHIC AD -->
+    <h3 class="category-title">Motion Graphic Ad</h3>
+    <div class="projects">
+      <div class="card">
+        <iframe 
+          class="project-media"
+          src="https://www.youtube.com/embed/a_LrbJHySOg"
+          title="Honey Jar Ad"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <h4>Honey Jar Ad</h4>
+        <p>Product-focused motion graphics built for performance campaigns.</p>
+      </div>
+    </div>
 
-      <div class="skills">
-        <span>Video Editing</span>
-        <span>Motion Graphics</span>
-        <span>Color Grading</span>
-        <span>Meta Ads</span>
-        <span>Google Analytics</span>
-        <span>Performance Marketing</span>
+    <!-- MONTAGE -->
+    <h3 class="category-title">Montage</h3>
+    <div class="projects">
+      <div class="card">
+        <iframe 
+          class="project-media"
+          src="https://www.youtube.com/embed/zZInv23Wxog"
+          title="Montage"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <h4>Energy Montage</h4>
+        <p>Fast-paced rhythm editing with cinematic transitions.</p>
+      </div>
+    </div>
+
+    <!-- TEXT ANIMATION -->
+    <h3 class="category-title">Text Animation</h3>
+    <div class="projects">
+      <div class="card">
+        <iframe 
+          class="project-media"
+          src="https://www.youtube.com/embed/my587bFXf0Q"
+          title="Text Animation"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <h4>Text Animation</h4>
+        <p>Typography-driven motion design with dynamic transitions.</p>
+      </div>
+    </div>
+
+    <!-- SHORT FORM VIDEO -->
+    <h3 class="category-title">Short Form Video</h3>
+    <div class="projects">
+      <div class="card">
+        <iframe 
+          class="project-media"
+          src="https://www.youtube.com/embed/aQfQz-LK1Zg"
+          title="Short Form Video"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+        <h4>Soda Ad (Short Form)</h4>
+        <p>High-impact short-form content optimized for reels and shorts.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= POSTER CAROUSEL ================= -->
+
+  <section class="carousel-section">
+    <h2 class="section-title">Poster Designs</h2>
+
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+
+      <div class="carousel-track">
+        <img src="assets/Posters/AI Motivational Banner.png">
+        <img src="assets/Posters/Apple airpods.png">
+        <img src="assets/Posters/Banner Design Himalaya.png">
+        <img src="assets/Posters/Banner design Mamaearth.png">
+        <img src="assets/Posters/Banner Design Tropicana.png">
+        <img src="assets/Posters/Card dude.png">
+        <img src="assets/Posters/fitness banner.png">
+        <img src="assets/Posters/retro design poster.png">
       </div>
 
-      <a href="#" class="resume-btn">Download Resume</a>
+      <button class="next">&#10095;</button>
     </div>
+  </section>
 
-    <div class="about-image">
-      <img src="assets/profile.jpg" alt="Profile">
+  <!-- ================= ILLUSTRATIONS ================= -->
+
+  <section class="illustrations">
+    <h2 class="section-title">Illustrations</h2>
+
+    <div class="carousel">
+      <button class="prev">&#10094;</button>
+
+      <div class="carousel-track">
+        <img src="assets/illustrations/Blonde-Women.png">
+        <img src="assets/illustrations/Design-illustration.png">
+        <img src="assets/illustrations/Girl-with-butterfly.png">
+        <img src="assets/illustrations/Owl-Illustration.png">
+        <img src="assets/illustrations/SMILYYY.png">
+        <img src="assets/illustrations/Sunset-Aesthetic.png">
+      </div>
+
+      <button class="next">&#10095;</button>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ================= ABOUT ================= -->
 
-<!-- ================= WORK ================= -->
-
-<section id="work" class="work">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="projects">
-    <div class="card">
-      <h4>Honey Jar Ad</h4>
-      <iframe class="project-media"
-        src="https://www.youtube.com/embed/a_LrbJHySOg"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="card">
-      <h4>Montage</h4>
-      <iframe class="project-media"
-        src="https://www.youtube.com/embed/zZInv23Wxog"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="card">
-      <h4>Text Animation</h4>
-      <iframe class="project-media"
-        src="https://www.youtube.com/embed/my587bFXf0Q"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ================= POSTERS ================= -->
-
-<section class="carousel-section">
-  <h2 class="section-title">Poster Designs</h2>
-
-  <div class="carousel">
-    <button class="prev">&#10094;</button>
-
-    <div class="carousel-track">
-      <img src="assets/posters/AI-Motivational-Banner.png">
-      <img src="assets/posters/Apple-airpods.png">
-      <img src="assets/posters/Banner-Design-Himalaya.png">
-      <img src="assets/posters/Banner-design-Mamaearth.png">
-      <img src="assets/posters/Banner-Design-Tropicana.png">
-      <img src="assets/posters/Card-dude.png">
-      <img src="assets/posters/fitness-banner.png">
-      <img src="assets/posters/retro-design-poster.png">
-    </div>
-
-    <button class="next">&#10095;</button>
-  </div>
-</section>
-
-<!-- ================= ILLUSTRATIONS ================= -->
-
-<section class="illustrations">
-  <h2 class="section-title">Illustrations</h2>
-
-  <div class="carousel">
-    <button class="prev">&#10094;</button>
-
-    <div class="carousel-track">
-      <img src="assets/illustrations/Blonde-Women.png">
-      <img src="assets/illustrations/Design-illustration.png">
-      <img src="assets/illustrations/Girl-with-butterfly.png">
-      <img src="assets/illustrations/Owl-Illustration.png">
-      <img src="assets/illustrations/SMILYYY.png">
-      <img src="assets/illustrations/Sunset-Aesthetic.png">
-    </div>
-
-    <button class="next">&#10095;</button>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-
+  <section id="about" class="about">
+    <h2 class="section-title">About</h2>
+    <p>
+      I combine video editing and performance marketing to craft visuals 
+      that not only look premium but drive measurable results.
+    </p>
+  </section>
 <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Let’s build something powerful together.</p>
-  <p>Email: yourmail@email.com</p>
+  <p>Email: arnavshirodkar9@gmail.com</p>
 </section>
+    
+  <footer>
+    © Arnav Shirodkar
+  </footer>
 
-<!-- ================= LIGHTBOX ================= -->
-
-<div class="lightbox">
+  <div class="cursor"></div>
+  
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
   <span class="close">&times;</span>
   <img class="lightbox-img">
 </div>
-
-<script src="script.js"></script>
-
+  
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
