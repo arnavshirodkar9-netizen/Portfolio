@@ -406,6 +406,21 @@ footer {
   aspect-ratio: 16 / 9;
 }
 
+/* ================= IMAGE CARD STYLE ================= */
+
+.carousel-track img {
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+}
+
+.carousel-track img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.35);
+  background: rgba(139, 92, 246, 0.12);
+}
+
 
 
 
