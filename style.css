@@ -220,7 +220,11 @@ footer {
 
 
 .carousel-track img:hover {
-  transform: scale(1.02);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 0 20px rgba(139, 92, 246, 0.6),
+    0 10px 40px rgba(139, 92, 246, 0.3);
+}
 }
 
 .carousel button {
@@ -420,6 +424,7 @@ footer {
   box-shadow: 0 10px 40px rgba(139, 92, 246, 0.35);
   background: rgba(139, 92, 246, 0.12);
 }
+
 
 
 
