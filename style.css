@@ -402,4 +402,9 @@ footer {
   box-shadow: 0 20px 60px rgba(139, 92, 246, 0.4);
 }
 
+.sunset-horizontal {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
 
