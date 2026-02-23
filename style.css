@@ -110,9 +110,8 @@ body {
 }
 
 .card {
-  flex: 1;
-  min-width: 280px;
-  padding: 20px;
+  width: 100%;
+  padding: 25px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -136,7 +135,7 @@ body {
 
 .project-media {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 520px;   /* Bigger cinematic size */
   border-radius: 20px;
   margin-top: 15px;
 }
@@ -406,6 +405,7 @@ footer {
   object-fit: cover;
   aspect-ratio: 16 / 9;
 }
+
 
 
 
