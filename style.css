@@ -425,6 +425,48 @@ footer {
   background: rgba(139, 92, 246, 0.12);
 }
 
+/* ================= CERTIFICATIONS ================= */
+
+.certifications {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.cert-card {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  min-width: 250px;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  background: rgba(139, 92, 246, 0.15);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+}
+
+.cert-card h4 {
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
 
 
 
